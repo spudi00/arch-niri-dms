@@ -1,0 +1,5 @@
+[filetype]
+rules = [
+  { mime = "*/", fg = "blue" },
+  { name = "*", fg = "blue" },
+]
