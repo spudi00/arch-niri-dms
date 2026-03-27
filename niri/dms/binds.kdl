@@ -10,25 +10,22 @@ binds {
     }
     Mod+Shift+F hotkey-overlay-title="File Manager" { spawn "kitty" "yazi"; }
     Mod+Shift+B hotkey-overlay-title="Open Browser" { spawn "zen-browser"; }
-    Mod+V hotkey-overlay-title="Clipboard Manager" {
+    Mod+Ctrl+V hotkey-overlay-title="Clipboard Manager" {
         spawn "dms" "ipc" "call" "clipboard" "toggle";
     }
-    Mod+M hotkey-overlay-title="Task Manager" {
-        spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
-    }
-
-    Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
+    
+    Mod+Ctrl+Q hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Mod+Comma hotkey-overlay-title="Settings" {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
     }
     Mod+Y hotkey-overlay-title="Browse Wallpapers" {
         spawn "dms" "ipc" "call" "dankdash" "wallpaper";
     }
-    Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-    Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
+    //Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
+    Mod+Ctrl+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
     // === WebApps ===
-    Mod+Shift+A hotkey-overlay-title="Open Browser" { spawn "zen-browser" "https://claude.ai/new"; }
+    Mod+Shift+A hotkey-overlay-title="Open Opencode" { spawn "kitty" "opencode"; }
     Mod+Shift+I hotkey-overlay-title="Open Browser" { spawn "zen-browser" "https://instagram.com/spudi0"; }
     Mod+Shift+Y hotkey-overlay-title="Open Browser" { spawn "zen-browser" "https://youtube.com"; }
 
@@ -37,7 +34,7 @@ binds {
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
         spawn "dms" "ipc" "call" "lock" "lock";
     }
-    Mod+Shift+E { quit; }
+    Mod+Ctrl+Escape { quit; }
     Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
@@ -87,8 +84,8 @@ binds {
     Mod+F { maximize-column; }
     Mod+Ctrl+F { fullscreen-window; }
     Mod+T { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-    Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
+    Mod+V { switch-focus-between-floating-and-tiling; }
+    Mod+Ctrl+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
 
     // === Focus Navigation ===
     Mod+Left  { focus-column-left; }
@@ -127,9 +124,7 @@ binds {
     Mod+Ctrl+I         { move-column-to-workspace-up; }
 
     // === Workspace Management ===
-    Ctrl+Shift+R hotkey-overlay-title="Rename Workspace" {
-        spawn "dms" "ipc" "call" "workspace-rename" "open";
-    }
+    //Ctrl+Shift+R hotkey-overlay-title="Rename Workspace" {spawn "dms" "ipc" "call" "workspace-rename" "open";}
 
     // === Mouse Wheel Navigation ===
     Mod+WheelScrollDown cooldown-ms=150 { focus-column-right; }
@@ -175,5 +170,5 @@ binds {
 
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Shift+P { power-off-monitors; }
+    Mod+Ctrl+P { power-off-monitors; }
 }
