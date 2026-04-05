@@ -8,12 +8,17 @@ binds {
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
+    Mod+Ctrl+E hotkey-overlay-title="Emojis" {
+        spawn "dms" "ipc" "call" "spotlight" "openQuery" ":e ";
+    }
     Mod+Shift+F hotkey-overlay-title="File Manager" { spawn "kitty" "yazi"; }
     Mod+Shift+B hotkey-overlay-title="Open Browser" { spawn "zen-browser"; }
     Mod+Ctrl+V hotkey-overlay-title="Clipboard Manager" {
         spawn "dms" "ipc" "call" "clipboard" "toggle";
     }
-    
+    Mod+Ctrl+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
+    //Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
+
     Mod+Ctrl+Q hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Mod+Comma hotkey-overlay-title="Settings" {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
@@ -21,13 +26,11 @@ binds {
     Mod+Y hotkey-overlay-title="Browse Wallpapers" {
         spawn "dms" "ipc" "call" "dankdash" "wallpaper";
     }
-    //Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-    Mod+Ctrl+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
-
+        
     // === WebApps ===
-    Mod+Shift+A hotkey-overlay-title="Open Opencode" { spawn "kitty" "opencode"; }
-    Mod+Shift+I hotkey-overlay-title="Open Browser" { spawn "zen-browser" "https://instagram.com/spudi0"; }
-    Mod+Shift+Y hotkey-overlay-title="Open Browser" { spawn "zen-browser" "https://youtube.com"; }
+    Mod+Shift+A hotkey-overlay-title="Opencode" { spawn "kitty" "opencode"; }
+    Mod+Shift+I hotkey-overlay-title="Instagram" { spawn "zen-browser" "https://instagram.com/spudi0"; }
+    Mod+Shift+Y hotkey-overlay-title="YouTube" { spawn "zen-browser" "https://youtube.com"; }
 
 
     // === Security ===
@@ -46,10 +49,13 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true {
         spawn "dms" "ipc" "call" "audio" "decrement" "3";
     }
-    Mod+XF86AudioMute allow-when-locked=true {
-        spawn "dms" "ipc" "call" "audio" "mute";
-    }
     XF86AudioMute allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "micmute";
+    }
+    
+    //Mod+XF86AudioMute allow-when-locked=true {spawn "dms" "ipc" "call" "audio" "mute";}
+    
+    XF86AudioMicMute allow-when-locked=true {
         spawn "dms" "ipc" "call" "audio" "micmute";
     }
 		XF86AudioPause allow-when-locked=true {
@@ -170,5 +176,5 @@ binds {
 
     // === System Controls ===
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Ctrl+P { power-off-monitors; }
+    Mod+Alt+P { power-off-monitors; }
 }
