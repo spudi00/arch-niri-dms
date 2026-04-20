@@ -12,14 +12,14 @@ window-rule {
 window-rule {
     match app-id="^vesktop$"
     open-on-workspace "3"
-    default-column-width { proportion 0.58; }
+    default-column-width { proportion 0.577; }
 }
 
 // @id=wr_1775830019937636601 @name=discord
 window-rule {
     match app-id="^discord$"
     open-on-workspace "3"
-    default-column-width { proportion 0.58; }
+    default-column-width { proportion 0.577; }
 }
 
 // @id=wr_1775395184360306738 @name=zen

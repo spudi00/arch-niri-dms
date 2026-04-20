@@ -12,7 +12,7 @@ binds {
         spawn "dms" "ipc" "call" "spotlight" "openQuery" ":e ";
     }
     Mod+Shift+F hotkey-overlay-title="File Manager" { spawn "nautilus"; }
-    Mod+Shift+B hotkey-overlay-title="Open Browser" { spawn "helium-browser"; }
+    Mod+Shift+B hotkey-overlay-title="Open Browser" { spawn "zen-browser"; }
     Mod+Ctrl+V hotkey-overlay-title="Clipboard Manager" {
         spawn "dms" "ipc" "call" "clipboard" "toggle";
     }
@@ -28,9 +28,9 @@ binds {
     }
         
     // === WebApps ===
-    Mod+Shift+A hotkey-overlay-title="AI" { spawn "helium-browser" "https://claude.ai/new"; }
-    Mod+Shift+Y hotkey-overlay-title="YouTube" { spawn "helium-browser" "https://youtube.com"; }
-    Mod+Shift+I hotkey-overlay-title="Instagram" { spawn "helium-browser" "https://www.instagram.com/sudqa/.com"; }
+    Mod+Shift+A hotkey-overlay-title="AI" { spawn "zen-browser" "https://claude.ai/new"; }
+    Mod+Shift+Y hotkey-overlay-title="YouTube" { spawn "zen-browser" "https://youtube.com"; }
+    Mod+Shift+I hotkey-overlay-title="Instagram" { spawn "zen-browser" "https://www.instagram.com/sudqa/.com"; }
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
